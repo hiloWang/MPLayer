@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lawyer</string>
+
+    <!-- Navigation Toolbar -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="checkNetWork">PLEASE CHECK OUT YOUR NETWORK IS GOOD \n" CLICK ME TO RECONNECTING"</string>
+
+    <!-- Navigation Item -->
+    <string name="nav_home_title">首页</string>
+</resources>

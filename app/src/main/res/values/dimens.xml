@@ -1,0 +1,33 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+
+    <dimen name="status_bar_height">56dp</dimen>
+    <dimen name="dept_appbar_height">80dp</dimen>
+    <dimen name="default_elevation">8dp</dimen>
+
+    <dimen name="nav_header_height">160dp</dimen>
+
+    <!-- cardview -->
+    <dimen name="card_corner_radius">2dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_19">19sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_21">21sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="margin_outter_24">24dp</dimen>
+    <dimen name="item_content_padding">9dp</dimen>
+    <dimen name="data_border_divider_height">8dp</dimen>
+</resources>

@@ -1,0 +1,87 @@
+<resources>
+
+    <!-- Base application theme. 系统默认，必须要有AppTheme主题且不能改名,且不能随意在这里添加任何东西不然?attr会失效-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Lawyer" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Actionbar color -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--Status bar color-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- Status bar color API 21 -->
+        <!--<item name="android:statusBarColor">#FF80AB</item>-->
+        <!--Window color-->
+        <!--<item name="android:windowBackground">@color/dim_foreground_material_dark</item>-->
+        <!-- colorAccent: 各控制元件(如：check box、switch 或是 radoi) 被勾选 (checked) 或是选定 (selected) 的颜色。-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Remove the change account button 注释后则开启 navigation账号 button 按钮, 点击切换账号 -->
+        <!--<item name="singleAccount">true</item>-->
+        <!-- colorControlNormal: 各控制元件的预设颜色。-->
+        <!--<item name="android:colorControlNormal"></item>-->
+        <!-- navigationBarColor: 导航栏的背景色，但只能用在 API Level 21 (Android 5) 以上的版本-->
+        <!--<item name="android:navigationBarColor"></item>-->
+        <!--正常状态下字体颜色和icon颜色-->
+        <item name="android:textColorPrimary">@color/cpb_white</item>
+        <item name="colorControlHighlight">@color/design_write_disable</item>
+        <!-- actionmode 弹出时覆盖部分布局, 若 false 则不符盖，将原有布局下移。-->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="popupTheme">@style/Widget.AppCompat.Light.PopupMenu.Overflow</item>
+        <item name="textAppearanceLargePopupMenu">
+            @style/Theme.Hilo.PopupMenuTextAppearanceLarge
+        </item>
+        <item name="android:textAppearanceLargePopupMenu">
+            @style/Theme.Hilo.PopupMenuTextAppearanceLarge
+        </item>
+        <!-- Activity 自定义过渡动画-->
+        <!--<item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>-->
+        <!--<item name="android:windowEnterTransition" tools:targetApi="lollipop">@android:transition/explode</item>-->
+        <!--<item name="android:windowExitTransition" tools:targetApi="lollipop">@android:transition/fade</item>-->
+        <!-- 指定shared element transitions -->
+        <!--<item name="android:windowSharedElementEnterTransition" tools:targetApi="lollipop">@android:transition/slide_left</item>-->
+        <!--<item name="android:windowSharedElementExitTransition" tools:targetApi="lollipop">@android:transition/slide_bottom</item>-->
+    </style>
+
+    <!-- toolbar标题样式 -->
+    <style name="toolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- toolbar菜单样式 -->
+    <style name="toolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="actionMenuTextAppearance">@style/ToolbarMenuTextSize</item>
+    </style>
+    <!-- toolbar菜单文字尺寸 -->
+    <style name="ToolbarMenuTextSize" parent="@style/TextAppearance.AppCompat.Menu">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CusomTranspatentLight" parent="AppTheme.Lawyer">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <!-- 透明activity 通过startActivityForResult启动并返回数据 -->
+    <style name="Theme.Transparent" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item> <!-- 此对话框的背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item> <!-- 对话框是否透明 -->
+        <item name="android:windowContentOverlay">@null</item> <!-- 对话框是否有遮盖 -->
+        <item name="android:windowNoTitle">true</item> <!-- 对话框无标题 -->
+        <item name="android:windowIsFloating">true</item> <!-- 对话框是否浮动 -->
+        <item name="android:backgroundDimEnabled">true</item> <!-- 是否允许对话框的背景变暗 -->
+    </style>
+
+    <style name="Md.Card" parent="CardView">
+        <item name="contentPadding">0dp</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+</resources>

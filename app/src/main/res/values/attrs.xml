@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WrapSwipeRefreshLayout">
+        <attr name="foreground" format="reference"/>
+    </declare-styleable>
+
+    <!-- CircleProgressBar FooterView-->
+    <declare-styleable name="MaterialCircleProgressBar">
+        <attr name="circle_inner_radius" format="dimension"/>
+        <attr name="circle_background_color" format="color"/>
+        <attr name="circle_progress_stoke_width" format="dimension"/>
+        <attr name="enable_circle_background" format="boolean"/>
+        <attr name="show_arrow" format="boolean"/>
+        <attr name="arrow_color" format="color"/>
+        <attr name="arrow_width" format="dimension"/>
+        <attr name="arrow_height" format="dimension"/>
+    </declare-styleable>
+
+</resources>

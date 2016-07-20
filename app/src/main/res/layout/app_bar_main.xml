@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordiNatorContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_toolbar_default" />
+
+    <com.hhly.lawyer.widget.UnScrollableViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!-- 一定要放在fab上面 -->
+    <TextView
+        android:id="@+id/cloud"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff"
+        android:filterTouchesWhenObscured="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone" />
+
+    <include layout="@layout/content_main" />
+
+    <include layout="@layout/view_fab" />
+
+</android.support.design.widget.CoordinatorLayout>

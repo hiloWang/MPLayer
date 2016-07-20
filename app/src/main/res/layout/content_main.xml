@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><!-- app:layout_behavior="com.hhly.lawyer.widget.TabBarBehavior" --><!-- app:layout_behavior="@string/appbar_scrolling_view_behavior" 只有加上这句, 才会在appbar下边-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tabbarContainer"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_gravity="bottom"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    app:layout_behavior="com.hhly.lawyer.widget.TabBarBehavior">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/rg_home_color"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/rg_home_color"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/rg_home_color"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/rg_home_color"
+            android:gravity="center" />
+    </RadioGroup>
+
+</LinearLayout>
