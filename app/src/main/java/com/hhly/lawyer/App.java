@@ -13,6 +13,7 @@ import com.hhly.lawyer.data.util.Logger;
 import com.hhly.lawyer.di.components.AppComponent;
 import com.hhly.lawyer.di.components.DaggerAppComponent;
 import com.hhly.lawyer.di.modules.AppModule;
+import com.squareup.leakcanary.LeakCanary;
 
 import java.lang.ref.WeakReference;
 
@@ -68,7 +69,7 @@ public class App extends Application {
 
     private void initializeLakCanary() {
         // 检查内存泄露
-        //		LeakCanary.install(this);
+        LeakCanary.install(this);
     }
 
     private void initializeInjector() {
