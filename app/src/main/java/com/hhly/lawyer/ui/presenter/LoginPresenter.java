@@ -1,5 +1,6 @@
 package com.hhly.lawyer.ui.presenter;
 
+import com.hhly.lawyer.R;
 import com.hhly.lawyer.data.entity.Wrapper;
 import com.hhly.lawyer.data.exception.DefaultErrorBundle;
 import com.hhly.lawyer.data.exception.ErrorBundle;
@@ -14,13 +15,13 @@ import com.hhly.lawyer.ui.view.MainActivity;
 import javax.inject.Inject;
 
 @PerActivity
-public class LoginPresenter extends BasePresenter<LoginView> implements ContractExpands.LoginContract{
+public class LoginPresenter extends BasePresenter<LoginView> implements ContractExpands.LoginContract {
 
     @Inject
     public LoginPresenter() {
     }
 
-    private void navigateToHome(Wrapper wrapper) {
+    private void navigateToHome() {
         this.getMvpView().navigateToHome();
     }
 
@@ -34,15 +35,13 @@ public class LoginPresenter extends BasePresenter<LoginView> implements Contract
 
     public void showErrorMessage(ErrorBundle errorBundle) {
         String errorMessage = ErrorMessageFactory.create(this.getMvpView().context(), errorBundle.getException());
-        switch (errorMessage) {
-            case "用户名不能为空":
-                this.getMvpView().setUsernameError();
-                break;
-            case "密码不能为空":
-                this.getMvpView().setPasswordError();
-                break;
-            default:
-                this.getMvpView().showError(errorMessage);
+
+        if (errorMessage.equals(getMvpView().context().getString(R.string.username_error))) {
+            this.getMvpView().setUsernameError();
+        } else if (errorMessage.equals(getMvpView().context().getString(R.string.password_error))) {
+            this.getMvpView().setPasswordError();
+        } else {
+            this.getMvpView().showError(errorMessage);
         }
     }
 
@@ -67,7 +66,7 @@ public class LoginPresenter extends BasePresenter<LoginView> implements Contract
 
         @Override
         public void onNext(Wrapper wrapper) {
-            LoginPresenter.this.navigateToHome(wrapper);
+            LoginPresenter.this.navigateToHome();
         }
     }
 }

@@ -222,6 +222,7 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
     }
 
     private void closeFabAnimation(View fab) {
+        llFabMenuContainerFirst.setVisibility(View.INVISIBLE);
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(fab, "rotation", -135, -175, 0);
         objectAnimator.setDuration(300);
         objectAnimator.setInterpolator(DECELERATE_INTERPOLATOR);
@@ -229,6 +230,7 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
     }
 
     private void openFabMenuAnimation() {
+        llFabMenuContainerFirst.setVisibility(View.VISIBLE);
         AnimatorSet animatorSet = new AnimatorSet();
         tvFabMenuActionFirst.setVisibility(View.VISIBLE);
         ivFabMenuActionFirst.setVisibility(View.VISIBLE);
