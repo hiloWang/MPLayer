@@ -65,8 +65,8 @@
 
     <color name="md_edittext_error">#DD2C00</color>
 
-    <color name="btn_send_normal">@color/md_material_blue_600</color>
-    <color name="btn_send_pressed">@color/design_write_secondary</color>
+    <color name="btn_send_normal">#ffffff</color>
+    <color name="btn_send_pressed">#FFEB3B</color>
     <color name="btn_default_light_pressed">#40ffffff</color>
     <color name="btn_default_light_normal">#00000000</color>
 

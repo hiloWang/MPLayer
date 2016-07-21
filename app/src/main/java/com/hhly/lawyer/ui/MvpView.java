@@ -1,5 +1,7 @@
 package com.hhly.lawyer.ui;
 
+import android.content.Context;
+
 /**
  * Description：MvpView
  * <p>
@@ -11,6 +13,12 @@ package com.hhly.lawyer.ui;
  * Time：2016-01-04 11:31
  */
 public interface MvpView {
+
+	/**
+	 * Get a {@link Context}.
+	 */
+	Context context();
+
 	/**
 	 * 发生错误
 	 *

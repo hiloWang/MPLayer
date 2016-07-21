@@ -2,8 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="24dp"
-    android:layout_marginRight="24dp"
     android:orientation="vertical">
 
     <ImageView
@@ -15,12 +13,16 @@
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
 
         <EditText
+            android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="请输入用户名"
+            android:imeOptions="actionNext"
+            android:inputType="number"
             android:paddingLeft="10dp"
             android:textColor="@color/design_black_text"
             android:textColorHint="@color/refresh_progress_1" />
@@ -29,18 +31,29 @@
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
 
         <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="请输入密码"
+            android:imeOptions="actionNext"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
             android:textColor="@color/design_black_text"
             android:textColorHint="@color/refresh_progress_1" />
     </android.support.design.widget.TextInputLayout>
 
-
-
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/btn_conners_clickable"
+        android:clickable="true"
+        android:text="登 录"
+        android:textColor="@color/design_black_bold"
+        android:textSize="@dimen/text_size_18" />
 </LinearLayout>

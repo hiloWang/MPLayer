@@ -41,4 +41,24 @@ public abstract class BasePresenter<T extends MvpView> implements MvpPresenter<T
 										"MvpPresenter");
 		}
 	}
+
+	@Override
+	public void resume() {
+
+	}
+
+	@Override
+	public void pause() {
+
+	}
+
+	@Override
+	public void destroy() {
+
+	}
+
+	@Override
+	public void initialize() {
+
+	}
 }

@@ -3,6 +3,7 @@ package com.hhly.lawyer.data.api;
 import com.hhly.lawyer.data.entity.Wrapper;
 
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 import rx.Observable;
 

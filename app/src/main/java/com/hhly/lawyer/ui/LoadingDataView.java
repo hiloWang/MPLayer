@@ -1,7 +1,5 @@
 package com.hhly.lawyer.ui;
 
-import android.content.Context;
-
 /**
  * Interface representing a View that will use to load data.
  */
@@ -23,8 +21,4 @@ public interface LoadingDataView extends MvpView {
 	 */
 	void showError(String message);
 
-	/**
-	 * Get a {@link Context}.
-	 */
-	Context context();
 }

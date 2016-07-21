@@ -9,4 +9,7 @@
 
     <!-- Navigation Item -->
     <string name="nav_home_title">首页</string>
+
+    <string name="username_error">用户名不能为空</string>
+    <string name="password_error">密码不能为空</string>
 </resources>

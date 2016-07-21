@@ -1,11 +1,12 @@
 package com.hhly.lawyer.data.repository;
 
+import android.text.TextUtils;
+
 import com.google.gson.Gson;
 import com.hhly.lawyer.data.api.RestApi;
 import com.hhly.lawyer.data.cache.LocalCache;
 import com.hhly.lawyer.data.entity.Wrapper;
 import com.hhly.lawyer.data.exception.NetworkConnectionException;
-import com.hhly.lawyer.data.util.Logger;
 
 import java.net.UnknownServiceException;
 
@@ -49,7 +50,6 @@ public class DataStoreRepository implements DataStore {
             } else if (wrapper.statusCode == 500) {
                 return Observable.error(new UnknownServiceException());
             } else {
-                if (wrapper.message != null) Logger.e(wrapper.message.toString());
                 return Observable.error(new Exception(wrapper.message));
             }
         });
@@ -61,5 +61,12 @@ public class DataStoreRepository implements DataStore {
                 .doOnNext(saveDataToCache)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<Wrapper> postLogin(String userName, String password) {
+        if (TextUtils.isEmpty(userName)) return Observable.error(new Exception("用户名不能为空"));
+        if (TextUtils.isEmpty(password)) return Observable.error(new Exception("密码不能为空"));
+        return Observable.just(new Wrapper());
     }
 }
