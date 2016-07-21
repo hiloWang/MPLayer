@@ -6,7 +6,7 @@ import com.hhly.lawyer.di.scope.PerActivity;
 import com.hhly.lawyer.ui.view.HomeFragment;
 import com.hhly.lawyer.ui.view.Page2Fragment;
 import com.hhly.lawyer.ui.view.Page3Fragment;
-import com.hhly.lawyer.ui.view.Page4Fragment;
+import com.hhly.lawyer.ui.view.LoginFragment;
 
 import dagger.Component;
 
@@ -20,5 +20,5 @@ public interface MainComponent {
 
     void inject(Page3Fragment fragment);
 
-    void inject(Page4Fragment fragment);
+    void inject(LoginFragment fragment);
 }

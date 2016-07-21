@@ -136,7 +136,7 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
                 HomeFragment.newInstance(),
                 Page2Fragment.newInstance(),
                 Page3Fragment.newInstance(),
-                Page4Fragment.newInstance()
+                LoginFragment.newInstance()
         };
         FragmentPagerAdapter pagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager(), fragments);
         viewPager.setAdapter(pagerAdapter);

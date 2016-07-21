@@ -20,7 +20,7 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 
-public class Page4Fragment extends BaseFragment implements LoginView {
+public class LoginFragment extends BaseFragment implements LoginView {
 
     private static final String FRAGMENT_SAVED_STATE_KEY = HomeFragment.class.getSimpleName();
     /**
@@ -38,8 +38,8 @@ public class Page4Fragment extends BaseFragment implements LoginView {
     LoginPresenter presenter;
     MainComponent mainComponent;
 
-    public static Page4Fragment newInstance() {
-        Page4Fragment fragment = new Page4Fragment();
+    public static LoginFragment newInstance() {
+        LoginFragment fragment = new LoginFragment();
         fragment.setArguments(new Bundle());
         return fragment;
     }
