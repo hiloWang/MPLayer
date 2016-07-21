@@ -6,7 +6,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.android.tools.build:gradle:2.1.2'
 
         // devmetrics 监测oncrete onstart onresume运行时间
         classpath 'com.frogermcs.androiddevmetrics:androiddevmetrics-plugin:0.3.1'
@@ -30,9 +30,11 @@ allprojects {
     }
 }
 
+// 保证整个团队都会统一使用该版本的gradle，打开terminal，在当前项目根目录下，输入gradlew wrapper，则会自动下载该版本的gradle到c盘.gradle/gradle/dists目录下
 task wrapper(type: Wrapper) {
     description 'Creates the gradle wrapper.'
-    gradleVersion '2.10'
+    gradleVersion '2.1.0'
+    archivePath = 'gradle/dists'
 }
 
 //task runDomainUnitTests(dependsOn: [':domain:test']) {
@@ -43,9 +45,9 @@ task runDataUnitTests(dependsOn: [':data:cleanTestDebugUnitTest', ':data:testDeb
     description 'Run unit tests for the data layer.'
 }
 
-task runUnitTests(dependsOn: ['runDomainUnitTests', 'runDataUnitTests']) {
-    description 'Run unit tests for both domain and data layers.'
-}
+//task runUnitTests(dependsOn: ['runDomainUnitTests', 'runDataUnitTests']) {
+//    description 'Run unit tests for both domain and data layers.'
+//}
 
 task runAcceptanceTests(dependsOn: [':presentation:connectedAndroidTest']) {
     description 'Run application acceptance tests.'
