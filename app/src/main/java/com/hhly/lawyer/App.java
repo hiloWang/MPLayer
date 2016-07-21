@@ -3,7 +3,6 @@ package com.hhly.lawyer;
 import android.app.Application;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 
 import com.facebook.stetho.Stetho;
 import com.frogermcs.androiddevmetrics.AndroidDevMetrics;
@@ -92,7 +91,7 @@ public class App extends Application {
 //			}
             onTrimMemory(TRIM_MEMORY_RUNNING_LOW);
             if (Runtime.getRuntime().totalMemory() > 25000000) {
-                Log.e("HILO", "释放内存中");
+                Logger.e("释放内存中");
                 System.gc();
             }
             dummyHandler.obtainMessage().sendToTarget();
