@@ -1,4 +1,6 @@
-package com.hhly.lawyer.ui;
+package com.hhly.lawyer.ui.base;
+
+import com.hhly.lawyer.ui.MvpView;
 
 /**
  * Description：MvpPresenter

@@ -3,7 +3,7 @@ package com.hhly.lawyer.ui;
 /**
  * Interface representing a View that will use to load data.
  */
-public interface LoadingDataView extends MvpView {
+public interface LoadingMvpView extends MvpView {
 	/**
 	 * Show a view with a progress bar indicating a loading process.
 	 */

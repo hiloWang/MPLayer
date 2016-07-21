@@ -1,6 +1,5 @@
 package com.hhly.lawyer.ui.base;
 
-import com.hhly.lawyer.ui.MvpPresenter;
 import com.hhly.lawyer.ui.MvpView;
 
 import rx.subscriptions.CompositeSubscription;

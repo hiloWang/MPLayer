@@ -6,7 +6,7 @@ import com.hhly.lawyer.data.exception.ErrorBundle;
 import com.hhly.lawyer.data.exception.ErrorMessageFactory;
 import com.hhly.lawyer.di.scope.PerActivity;
 import com.hhly.lawyer.interactor.DefaultSubscriber;
-import com.hhly.lawyer.ui.ContractView;
+import com.hhly.lawyer.ui.ContractExpands;
 import com.hhly.lawyer.ui.base.BasePresenter;
 import com.hhly.lawyer.ui.contract.LoginView;
 import com.hhly.lawyer.ui.view.MainActivity;
@@ -14,7 +14,7 @@ import com.hhly.lawyer.ui.view.MainActivity;
 import javax.inject.Inject;
 
 @PerActivity
-public class LoginPresenter extends BasePresenter<LoginView> implements ContractView.LoginContract{
+public class LoginPresenter extends BasePresenter<LoginView> implements ContractExpands.LoginContract{
 
     @Inject
     public LoginPresenter() {

@@ -1,8 +1,8 @@
 package com.hhly.lawyer.ui.contract;
 
-import com.hhly.lawyer.ui.LoadingDataView;
+import com.hhly.lawyer.ui.LoadingMvpView;
 
-public interface LoginView extends LoadingDataView {
+public interface LoginView extends LoadingMvpView {
 
     void setUsernameError();
 
