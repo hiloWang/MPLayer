@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:clickable="true"
+    android:background="@drawable/selector_item_clickable">
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/item_content_padding"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_cellphone"/>
+
+    <TextView
+        android:id="@+id/contentHintText"
+        android:layout_toRightOf="@+id/imageIcon"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/item_content_padding"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/login_input_phone_num"/>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:padding="5dp"
+        android:src="@mipmap/ic_arrow_next"
+        />
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"
+        android:layout_marginTop="@dimen/item_content_padding"/>
+
+</RelativeLayout>
+
+

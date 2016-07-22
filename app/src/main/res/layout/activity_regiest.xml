@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar_default" />
+
+    <TextView
+        style="@style/my_text_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:drawableLeft="@mipmap/ic_i"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/login_pwd_format"
+        android:textSize="@dimen/text_size_10" />
+
+    <!--输入手机号码-->
+    <com.hhly.lawyer.widget.IconItemView
+        android:id="@+id/phoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_content_padding"
+        app:icon_content_hint="@string/login_input_phone_num"
+        app:icon_left_image_icon="@mipmap/ic_cellphone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--短信验证码-->
+        <com.hhly.lawyer.widget.IconItemView
+            android:id="@+id/verifyCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_content_padding"
+            app:icon_content_hint="@string/login_verify_code"
+            app:icon_left_image_icon="@mipmap/ic_mail" />
+
+        <TextView
+            android:id="@+id/getVerifyCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/item_content_padding"
+            android:padding="5dp"
+            android:clickable="true"
+            android:background="@drawable/selector_item_clickable"
+            android:gravity="center_vertical"
+            android:text="@string/login_get_verify_code"
+            android:textColor="@color/design_black_secondary"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+    <!--输入密码-->
+    <com.hhly.lawyer.widget.IconItemView
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_content_padding"
+        app:icon_content_hint="@string/login_input_password"
+        app:icon_left_image_icon="@mipmap/ic_lock" />
+
+
+    <!--再次输入密码-->
+    <com.hhly.lawyer.widget.IconItemView
+        android:id="@+id/confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_content_padding"
+        app:icon_content_hint="@string/login_input_password_again"
+        app:icon_left_image_icon="@mipmap/ic_lock" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/btn_conners_clickable"
+        android:clickable="true"
+        android:text="@string/confirmation"
+        android:textColor="@color/design_black_bold"
+        android:textSize="@dimen/text_size_18" />
+</LinearLayout>

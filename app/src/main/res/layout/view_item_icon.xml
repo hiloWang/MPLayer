@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingTop="10dp"
+        android:paddingLeft="@dimen/item_content_padding"
+        android:src="@mipmap/ic_cellphone" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/contentHintText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:textColor="@color/design_black_secondary"
+                android:textSize="@dimen/text_size_14" />
+
+        </android.support.design.widget.TextInputLayout>
+</RelativeLayout>

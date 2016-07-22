@@ -1,7 +1,7 @@
 package com.hhly.lawyer.ui.presenter;
 
 import com.hhly.lawyer.R;
-import com.hhly.lawyer.data.entity.Wrapper;
+import com.hhly.lawyer.data.entity.HttpResult;
 import com.hhly.lawyer.data.exception.DefaultErrorBundle;
 import com.hhly.lawyer.data.exception.ErrorBundle;
 import com.hhly.lawyer.data.exception.ErrorMessageFactory;
@@ -52,7 +52,7 @@ public class LoginPresenter extends BasePresenter<LoginView> implements Contract
                 .subscribe(new MySubscriber()));
     }
 
-    public final class MySubscriber extends DefaultSubscriber<Wrapper> {
+    public final class MySubscriber extends DefaultSubscriber<HttpResult> {
         @Override
         public void onCompleted() {
             if (compositeSubscription != null) compositeSubscription.remove(this);
@@ -65,7 +65,7 @@ public class LoginPresenter extends BasePresenter<LoginView> implements Contract
         }
 
         @Override
-        public void onNext(Wrapper wrapper) {
+        public void onNext(HttpResult wrapper) {
             LoginPresenter.this.navigateToHome();
         }
     }

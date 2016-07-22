@@ -461,7 +461,7 @@ public class MaterialArrowProgressDrawable extends Drawable implements Animatabl
 		/**
 		 * Set the colors the progress spinner alternates between.
 		 *
-		 * @param colors Array of integers describing the colors. Must be non-<statusCode>null</statusCode>.
+		 * @param colors Array of integers describing the colors. Must be non-<code>null</code>.
 		 */
 		public void setColors(int[] colors) {
 			mColors = colors;

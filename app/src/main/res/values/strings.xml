@@ -12,4 +12,11 @@
 
     <string name="username_error">用户名不能为空</string>
     <string name="password_error">密码不能为空</string>
+    <string name="login_input_phone_num">请输入手机号码</string>
+    <string name="login_pwd_format">密码由6-16位字母(区分大小写)、数字或下划线组成</string>
+    <string name="confirmation">确认</string>
+    <string name="login_verify_code">短信验证码</string>
+    <string name="login_get_verify_code">获取验证码</string>
+    <string name="login_input_password">请输入密码</string>
+    <string name="login_input_password_again">请再次输入密码</string>
 </resources>

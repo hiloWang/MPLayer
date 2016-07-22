@@ -91,19 +91,19 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
             switch (checkedId) {
                 case R.id.rb1:
                     viewPager.setCurrentItem(0);
-                    showToast("1");
+                    toolbar.setVisibility(View.VISIBLE);
                     break;
                 case R.id.rb2:
                     viewPager.setCurrentItem(1);
-                    showToast("2");
+                    toolbar.setVisibility(View.VISIBLE);
                     break;
                 case R.id.rb3:
                     viewPager.setCurrentItem(2);
-                    showToast("3");
+                    toolbar.setVisibility(View.GONE);
                     break;
                 case R.id.rb4:
                     viewPager.setCurrentItem(3);
-                    showToast("4");
+                    toolbar.setVisibility(View.VISIBLE);
                     break;
             }
         });
@@ -135,7 +135,7 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
         Fragment[] fragments = {
                 HomeFragment.newInstance(),
                 Page2Fragment.newInstance(),
-                Page3Fragment.newInstance(),
+                TabLayoutFragment.newInstance(),
                 LoginFragment.newInstance()
         };
         FragmentPagerAdapter pagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager(), fragments);

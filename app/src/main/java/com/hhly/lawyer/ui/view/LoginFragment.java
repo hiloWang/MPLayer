@@ -46,7 +46,7 @@ public class LoginFragment extends BaseFragment implements LoginView {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_page4;
+        return R.layout.fragment_login;
     }
 
     @Override

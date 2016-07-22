@@ -84,4 +84,25 @@
         <item name="cardElevation">@dimen/card_elevation</item>
     </style>
 
+    <declare-styleable name="ArrowItemView">
+        <attr name="arrow_left_image_icon" format="reference"/>
+        <attr name="arrow_content_text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="IconItemView">
+        <attr name="icon_left_image_icon" format="reference"/>
+        <attr name="icon_content_hint" format="string"/>
+    </declare-styleable>
+
+    <style name="My.TabLayoutTextAppearanceInverse" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#9fff</item>
+    </style>
+
+    <style name="my_text_value" >
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/design_black_secondary</item>
+        <item name="android:background">@null</item>
+    </style>
+
 </resources>

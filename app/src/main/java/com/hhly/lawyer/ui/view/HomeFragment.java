@@ -12,7 +12,7 @@ import com.hhly.lawyer.R;
 import com.hhly.lawyer.adapter.BaseRecyclerViewHolder;
 import com.hhly.lawyer.adapter.HomeAdapter;
 import com.hhly.lawyer.adapter.decration.BorderDividerItemDecration;
-import com.hhly.lawyer.data.entity.Wrapper;
+import com.hhly.lawyer.data.entity.HttpResult;
 import com.hhly.lawyer.di.components.MainComponent;
 import com.hhly.lawyer.ui.base.BaseFragment;
 import com.hhly.lawyer.ui.contract.HomeView;
@@ -187,7 +187,7 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
     }
 
     @Override
-    public void renderUserList(Wrapper wrapper) {
+    public void renderUserList(HttpResult wrapper) {
         this.feedAdapter(wrapper);
     }
 
@@ -204,7 +204,7 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
         this.recyclerView.removeItemDecoration(this.dataDecration);
     }
 
-    private void feedAdapter(/*Collection<UserModel> usersCollection*/Wrapper wrapper) {
+    private void feedAdapter(/*Collection<UserModel> usersCollection*/HttpResult wrapper) {
         if (wrapper == null) return;
         checkNotNull(adapter, "adapter == null");
 //        this.usersLists = (ArrayList<UserModel>)usersCollection;
