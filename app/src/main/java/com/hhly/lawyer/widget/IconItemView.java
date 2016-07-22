@@ -60,7 +60,7 @@ public class IconItemView extends FrameLayout {
                             contentHintText.setInputType(InputType.TYPE_CLASS_NUMBER);
                         } else if (text.equals(context.getString(R.string.login_input_password))
                                 || text.equals(context.getString(R.string.login_input_password_again))) {
-                            contentHintText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                            contentHintText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                         }
                     }
                     break;
