@@ -3,17 +3,13 @@ package com.hhly.lawyer.ui.view;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.hhly.lawyer.R;
 import com.hhly.lawyer.adapter.MyFragmentPagerAdapter;
 import com.hhly.lawyer.ui.base.BaseFragment;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import okhttp3.MultipartBody;
 
 public class TabLayoutFragment extends BaseFragment {
 
@@ -81,13 +77,5 @@ public class TabLayoutFragment extends BaseFragment {
         if (resestTheLifeCycle) {
             this.resestTheLifeCycle = false;
         }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
     }
 }

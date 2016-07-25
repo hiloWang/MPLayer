@@ -5,19 +5,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.hhly.lawyer.widget.ArrowItemView
-        android:id="@+id/sivTest"
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordiNatorContent"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_setting_item_view"
-        app:arrow_content_text="@string/login_input_phone_num"
-        app:arrow_left_image_icon="@mipmap/ic_cellphone" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/design_black_text"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <com.hhly.lawyer.widget.ArrowItemView
+                android:id="@+id/sivTest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_setting_item_view"
+                app:arrow_content_text="@string/login_input_phone_num"
+                app:arrow_left_image_icon="@mipmap/ic_cellphone" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="512dp"
+                android:gravity="center"
+                android:text="哈哈啊"
+                android:textColor="@color/design_black_text" />
+        </LinearLayout>
+
+        <include layout="@layout/view_bottom_sheet" />
+    </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>
 

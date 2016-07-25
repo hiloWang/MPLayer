@@ -55,5 +55,4 @@ public class ArrowItemView extends FrameLayout {
         }
         ta.recycle();
     }
-
 }
