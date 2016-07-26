@@ -1,7 +1,6 @@
 package com.hhly.lawyer.ui.view;
 
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.TextView;
@@ -94,7 +93,7 @@ public class ForgotYourPasswordActivity extends BaseToolbarActivity {
     private void getVerifyCode(Void aVoid) {
         String number = phoneNum.getText();
         if (TextUtils.isEmpty(number)) {
-            this.showSnackbar(getString(R.string.validate_phone_number));
+            this.showToast(getString(R.string.validate_phone_number));
             return;
         }
         compositeSubscription.add(getApiComponent().dataStore().getDummyData(number, "4").subscribe(new MySubscriber()));
@@ -103,18 +102,7 @@ public class ForgotYourPasswordActivity extends BaseToolbarActivity {
 
     private void showErrorMessage(ErrorBundle errorBundle) {
         String errorMessage = ErrorMessageFactory.create(ForgotYourPasswordActivity.this, errorBundle.getException());
-        this.showSnackbar(errorMessage);
-    }
-
-    private void showSnackbar(String message) {
-        Snackbar snackbar = Snackbar.make(getVerifyCode, message, Snackbar.LENGTH_INDEFINITE);
-        Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
-        snackbarLayout.setBackgroundColor(getResources().getColor(R.color.background_layout));
-        ((TextView) snackbarLayout.findViewById(R.id.snackbar_text)).setTextColor(
-                getResources().getColor(R.color.design_black_text));
-        snackbar.setAction("WELL", v -> {
-            snackbar.dismiss();
-        }).show();
+        this.showToast(errorMessage);
     }
 
     private final class MySubscriber extends DefaultSubscriber<HttpResult> {
@@ -132,7 +120,7 @@ public class ForgotYourPasswordActivity extends BaseToolbarActivity {
 
         @Override
         public void onNext(HttpResult wrapper) {
-            ForgotYourPasswordActivity.this.showSnackbar("获取验证码成功");
+            ForgotYourPasswordActivity.this.showToast("获取验证码成功");
         }
     }
 }

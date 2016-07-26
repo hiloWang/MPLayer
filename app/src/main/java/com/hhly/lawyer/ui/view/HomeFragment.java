@@ -205,11 +205,10 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
     }
 
     private void feedAdapter(/*Collection<UserModel> usersCollection*/HttpResult wrapper) {
+        this.stopRefreshing();
         if (wrapper == null) return;
         checkNotNull(adapter, "adapter == null");
 //        this.usersLists = (ArrayList<UserModel>)usersCollection;
-        this.hideLoading();
-        this.stopRefreshing();
         ((MainActivity) getActivity()).getAppComponent().rxBus().send(wrapper.data);
 
         if (loadingMoreData) {
@@ -230,7 +229,7 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
     }
 
     public void loadUserList() {
-//        presenter.initialize();
+        presenter.initialize();
     }
 
     private void setAdapter() {

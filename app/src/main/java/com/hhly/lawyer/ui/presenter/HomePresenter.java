@@ -8,7 +8,6 @@ import com.hhly.lawyer.di.scope.PerActivity;
 import com.hhly.lawyer.interactor.DefaultSubscriber;
 import com.hhly.lawyer.ui.base.BasePresenter;
 import com.hhly.lawyer.ui.contract.HomeView;
-import com.hhly.lawyer.ui.view.MainActivity;
 
 import javax.inject.Inject;
 
@@ -37,8 +36,9 @@ public class HomePresenter extends BasePresenter<HomeView> {
     @Override
     public void initialize() {
         showViewLoading();
-        compositeSubscription.add(((MainActivity) getMvpView().context()).getApiComponent().dataStore().getDummyData("18686812686", "4")
-                .subscribe(new MySubscriber()));
+//        compositeSubscription.add(((MainActivity) getMvpView().context()).getApiComponent().dataStore().getDummyData("18686812686", "4")
+//                .subscribe(new MySubscriber()));
+        this.getMvpView().renderUserList(null);
     }
 
     private void showViewLoading() {
