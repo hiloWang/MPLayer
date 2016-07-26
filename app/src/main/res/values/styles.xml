@@ -89,9 +89,9 @@
         <attr name="arrow_content_text" format="string"/>
     </declare-styleable>
 
-    <declare-styleable name="IconItemView">
-        <attr name="icon_left_image_icon" format="reference"/>
-        <attr name="icon_content_hint" format="string"/>
+    <declare-styleable name="LawyerItemView">
+        <attr name="lawyer_left_image_icon" format="reference"/>
+        <attr name="lawyer_content_hint" format="string"/>
     </declare-styleable>
 
     <style name="My.TabLayoutTextAppearanceInverse" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">

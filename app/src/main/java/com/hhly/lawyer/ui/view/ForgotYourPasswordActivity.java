@@ -22,27 +22,27 @@ import java.util.concurrent.TimeUnit;
 import butterknife.BindView;
 import rx.subscriptions.CompositeSubscription;
 
-public class RegiestActivity extends BaseToolbarActivity {
+public class ForgotYourPasswordActivity extends BaseToolbarActivity {
 
     @BindView(R.id.phoneNum)
     ItemView phoneNum;
     @BindView(R.id.verifyCode)
     ItemView verifyCode;
+    @BindView(R.id.getVerifyCode)
+    TextView getVerifyCode;
     @BindView(R.id.password)
     ItemView password;
     @BindView(R.id.confirm_password)
     ItemView confirmPassword;
     @BindView(R.id.confirm)
     Button confirm;
-    @BindView(R.id.getVerifyCode)
-    TextView getVerifyCode;
 
     private CompositeSubscription compositeSubscription;
     private CountDown countDownTimer;
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_regiest;
+        return R.layout.activity_forgotpwd;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class RegiestActivity extends BaseToolbarActivity {
 
     @Override
     protected void initData() {
-        mActionBarHelper.setTitle(getString(R.string.regiest));
+        mActionBarHelper.setTitle(getString(R.string.forgotyourpwd));
     }
 
     @Override
@@ -67,12 +67,12 @@ public class RegiestActivity extends BaseToolbarActivity {
         countDownTimer = CountDown.getDefault(new CountDown.CountDownCallback() {
             @Override
             public void onFinish() {
-                RegiestActivity.this.setVerifyViewEnabled(true, getString(R.string.login_get_verify_code));
+                ForgotYourPasswordActivity.this.setVerifyViewEnabled(true, getString(R.string.login_get_verify_code));
             }
 
             @Override
             public void onTick(long millisUntilFinished) {
-                RegiestActivity.this.setVerifyViewEnabled(false, millisUntilFinished / CountDown.TIMEOUT_INTERVEL + "秒");
+                ForgotYourPasswordActivity.this.setVerifyViewEnabled(false, millisUntilFinished / CountDown.TIMEOUT_INTERVEL + "秒");
             }
         });
     }
@@ -102,7 +102,7 @@ public class RegiestActivity extends BaseToolbarActivity {
     }
 
     private void showErrorMessage(ErrorBundle errorBundle) {
-        String errorMessage = ErrorMessageFactory.create(RegiestActivity.this, errorBundle.getException());
+        String errorMessage = ErrorMessageFactory.create(ForgotYourPasswordActivity.this, errorBundle.getException());
         this.showSnackbar(errorMessage);
     }
 
@@ -125,14 +125,14 @@ public class RegiestActivity extends BaseToolbarActivity {
 
         @Override
         public void onError(Throwable e) {
-            RegiestActivity.this.showErrorMessage(new DefaultErrorBundle((Exception) e));
-            RegiestActivity.this.countDownTimer.cancel();
-            RegiestActivity.this.setVerifyViewEnabled(true, getString(R.string.login_get_verify_code));
+            ForgotYourPasswordActivity.this.showErrorMessage(new DefaultErrorBundle((Exception) e));
+            ForgotYourPasswordActivity.this.countDownTimer.cancel();
+            ForgotYourPasswordActivity.this.setVerifyViewEnabled(true, getString(R.string.login_get_verify_code));
         }
 
         @Override
         public void onNext(HttpResult wrapper) {
-            RegiestActivity.this.showSnackbar("获取验证码成功");
+            ForgotYourPasswordActivity.this.showSnackbar("获取验证码成功");
         }
     }
 }

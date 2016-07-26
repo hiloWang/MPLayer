@@ -19,4 +19,9 @@
     <string name="login_get_verify_code">获取验证码</string>
     <string name="login_input_password">请输入密码</string>
     <string name="login_input_password_again">请再次输入密码</string>
+    <string name="regiest">注册</string>
+    <string name="register_agree">注册即表示您同意律师平台协议</string>
+    <string name="register_agreement">《用户协议》</string>
+    <string name="forgotyourpwd">找回密码</string>
+    <string name="validate_phone_number">手机号码不能为空</string>
 </resources>

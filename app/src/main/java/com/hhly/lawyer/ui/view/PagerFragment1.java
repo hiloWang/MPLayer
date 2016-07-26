@@ -64,7 +64,8 @@ public class PagerFragment1 extends BaseFragment {
     @Override
     protected void initListeners() {
         RxView.clicks(textView).throttleFirst(1, TimeUnit.SECONDS).subscribe(aVoid -> {
-            startActivity(new Intent(getActivity(), RegiestActivity.class));
+            if (page == 1) startActivity(new Intent(getActivity(), RegiestActivity.class));
+            else startActivity(new Intent(getActivity(), ForgotYourPasswordActivity.class));
         });
 
         RxView.clicks(sivTest).throttleFirst(1, TimeUnit.SECONDS).subscribe(this::showBottomSheet);
@@ -89,7 +90,6 @@ public class PagerFragment1 extends BaseFragment {
                             fab.setVisibility(View.VISIBLE);
                             fab.startAnimation(growAnimation);
                         }
-
                         break;
 
                     // 拖拽松开之后到达终点位置（collapsed or expanded）前的状态

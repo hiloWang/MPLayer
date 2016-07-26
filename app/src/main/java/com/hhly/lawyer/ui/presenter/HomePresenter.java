@@ -1,8 +1,6 @@
 package com.hhly.lawyer.ui.presenter;
 
-import com.hhly.lawyer.data.ResponseFunc;
 import com.hhly.lawyer.data.entity.HttpResult;
-import com.hhly.lawyer.data.entity.UploadFile;
 import com.hhly.lawyer.data.exception.DefaultErrorBundle;
 import com.hhly.lawyer.data.exception.ErrorBundle;
 import com.hhly.lawyer.data.exception.ErrorMessageFactory;
@@ -12,11 +10,7 @@ import com.hhly.lawyer.ui.base.BasePresenter;
 import com.hhly.lawyer.ui.contract.HomeView;
 import com.hhly.lawyer.ui.view.MainActivity;
 
-import java.io.File;
-
 import javax.inject.Inject;
-
-import rx.Subscriber;
 
 @PerActivity
 public class HomePresenter extends BasePresenter<HomeView> {

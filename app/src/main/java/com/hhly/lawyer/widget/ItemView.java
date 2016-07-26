@@ -16,24 +16,24 @@ import com.hhly.lawyer.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class IconItemView extends FrameLayout {
+public class ItemView extends FrameLayout {
 
     @BindView(R.id.imageIcon)
-    ImageView imageIcon;
+    ImageView icon;
     @BindView(R.id.contentHintText)
     EditText contentHintText;
     @BindView(R.id.textInputLayout)
     TextInputLayout textInputLayout;
 
-    public IconItemView(Context context) {
+    public ItemView(Context context) {
         this(context, null);
     }
 
-    public IconItemView(Context context, AttributeSet attrs) {
+    public ItemView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public IconItemView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ItemView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.initialize(context, attrs, defStyleAttr);
     }
@@ -42,15 +42,15 @@ public class IconItemView extends FrameLayout {
         LayoutInflater.from(context).inflate(R.layout.view_item_icon, this);
         ButterKnife.bind(this);
 
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.IconItemView);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.LawyerItemView);
         for (int i = 0; i < ta.length(); i++) {
             int attrId = ta.getIndex(i);
             switch (attrId) {
-                case R.styleable.IconItemView_icon_left_image_icon:
+                case R.styleable.LawyerItemView_lawyer_left_image_icon:
                     int resourceId = ta.getResourceId(attrId, 0);
-                    if (resourceId != 0) imageIcon.setImageResource(resourceId);
+                    if (resourceId != 0) icon.setImageResource(resourceId);
                     break;
-                case R.styleable.IconItemView_icon_content_hint:
+                case R.styleable.LawyerItemView_lawyer_content_hint:
                     String text = ta.getString(attrId);
                     if (!TextUtils.isEmpty(text)) {
                         textInputLayout.setHint(text);
@@ -67,5 +67,9 @@ public class IconItemView extends FrameLayout {
             }
         }
         ta.recycle();
+    }
+
+    public String getText() {
+        return contentHintText.getText().toString();
     }
 }

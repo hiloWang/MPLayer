@@ -73,7 +73,7 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
         checkNotNull(swipeRefreshLayout, "swipeRefreshLayout == null");
 
         swipeRefreshLayout.setColorSchemeResources(R.color.refresh_progress_1);
-        swipeRefreshLayout.setOnRefreshListener(() -> presenter.initialize());
+        swipeRefreshLayout.setOnRefreshListener(() -> loadUserList());
 
         // footerView error callback
         ((MainActivity) context()).getAppComponent().rxBus().toObserverable().observeOn(Schedulers.io()).subscribe(o -> {
@@ -230,7 +230,7 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
     }
 
     public void loadUserList() {
-        presenter.initialize();
+//        presenter.initialize();
     }
 
     private void setAdapter() {

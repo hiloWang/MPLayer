@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@android:color/white"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
     <include layout="@layout/view_toolbar_default" />
@@ -28,25 +28,6 @@
         app:lawyer_content_hint="@string/login_input_phone_num"
         app:lawyer_left_image_icon="@mipmap/ic_cellphone" />
 
-    <!--输入密码-->
-    <com.hhly.lawyer.widget.ItemView
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/item_content_padding"
-        app:lawyer_content_hint="@string/login_input_password"
-        app:lawyer_left_image_icon="@mipmap/ic_lock" />
-
-
-    <!--再次输入密码-->
-    <com.hhly.lawyer.widget.ItemView
-        android:id="@+id/confirm_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/item_content_padding"
-        app:lawyer_content_hint="@string/login_input_password_again"
-        app:lawyer_left_image_icon="@mipmap/ic_lock" />
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -66,14 +47,33 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/item_content_padding"
-            android:padding="5dp"
-            android:clickable="true"
             android:background="@drawable/selector_item_clickable"
+            android:clickable="true"
             android:gravity="center_vertical"
+            android:padding="5dp"
             android:text="@string/login_get_verify_code"
             android:textColor="@color/design_black_secondary"
             android:textSize="@dimen/text_size_12" />
     </RelativeLayout>
+
+    <!--输入密码-->
+    <com.hhly.lawyer.widget.ItemView
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_content_padding"
+        app:lawyer_content_hint="@string/login_input_password"
+        app:lawyer_left_image_icon="@mipmap/ic_lock" />
+
+
+    <!--再次输入密码-->
+    <com.hhly.lawyer.widget.ItemView
+        android:id="@+id/confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_content_padding"
+        app:lawyer_content_hint="@string/login_input_password_again"
+        app:lawyer_left_image_icon="@mipmap/ic_lock" />
 
     <Button
         android:id="@+id/confirm"
@@ -82,30 +82,8 @@
         android:layout_margin="8dp"
         android:background="@drawable/btn_conners_clickable"
         android:clickable="true"
-        android:text="@string/regiest"
+        android:text="@string/confirmation"
         android:textColor="@color/design_black_bold"
         android:textSize="@dimen/text_size_18" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#686868"
-            android:textSize="@dimen/text_size_12"
-            android:text="@string/register_agree"/>
-
-        <TextView
-            android:id="@+id/tv_arreement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#009b7c"
-            android:textSize="@dimen/text_size_12"
-            android:text="@string/register_agreement"/>
-    </LinearLayout>
 </LinearLayout>
