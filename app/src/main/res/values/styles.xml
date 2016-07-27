@@ -84,6 +84,10 @@
         <item name="cardElevation">@dimen/card_elevation</item>
     </style>
 
+    <style name="Md.Card.CompatPadding" parent="Md.Card">
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
     <declare-styleable name="ArrowItemView">
         <attr name="arrow_left_image_icon" format="reference"/>
         <attr name="arrow_content_text" format="string"/>

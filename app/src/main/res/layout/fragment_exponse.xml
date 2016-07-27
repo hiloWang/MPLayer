@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardview1"
+        style="@style/Md.Card.CompatPadding"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:transitionName="sharedCardView">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/btn_conners_clickable"
+            android:textColor="#000000" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardview2"
+        style="@style/Md.Card.CompatPadding"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:transitionName="sharedCardView">
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_conners_clickable"
+            android:gravity="center"
+            android:textColor="#000000" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardview3"
+        style="@style/Md.Card.CompatPadding"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:transitionName="sharedCardView">
+
+        <TextView
+            android:id="@+id/textview3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_conners_clickable"
+            android:gravity="center"
+            android:textColor="#000000" />
+    </android.support.v7.widget.CardView>
+</LinearLayout>

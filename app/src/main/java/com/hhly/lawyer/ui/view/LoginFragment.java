@@ -1,10 +1,12 @@
 package com.hhly.lawyer.ui.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.hhly.lawyer.R;
 import com.hhly.lawyer.data.util.Logger;
@@ -34,6 +36,10 @@ public class LoginFragment extends BaseFragment implements LoginView {
     EditText etPassword;
     @BindView(R.id.btnLogin)
     Button btnLogin;
+    @BindView(R.id.tvForgotPsd)
+    TextView tvForgotPsd;
+    @BindView(R.id.tvRegiest)
+    TextView tvRegiest;
     @Inject
     LoginPresenter presenter;
     MainComponent mainComponent;
@@ -64,6 +70,8 @@ public class LoginFragment extends BaseFragment implements LoginView {
     @Override
     protected void initListeners() {
         RxView.clicks(btnLogin).throttleFirst(1, TimeUnit.SECONDS).subscribe(this::bringToActivity);
+        RxView.clicks(tvForgotPsd).throttleFirst(1, TimeUnit.SECONDS).subscribe(this::bringToForgotYourPasswordActivity);
+        RxView.clicks(tvRegiest).throttleFirst(1, TimeUnit.SECONDS).subscribe(this::bringToRegiestActivity);
     }
 
     @Override
@@ -151,7 +159,15 @@ public class LoginFragment extends BaseFragment implements LoginView {
 
     }
 
-    public void bringToActivity(Void aVoid) {
+    private void bringToActivity(Void aVoid) {
         presenter.validateCredentials(etUsername.getText().toString(), etPassword.getText().toString());
+    }
+
+    private void bringToForgotYourPasswordActivity(Void aVoid) {
+        startActivity(new Intent(getActivity(), ForgotYourPasswordActivity.class));
+    }
+
+    private void bringToRegiestActivity(Void aVoid) {
+        startActivity(new Intent(getActivity(), RegiestActivity.class));
     }
 }

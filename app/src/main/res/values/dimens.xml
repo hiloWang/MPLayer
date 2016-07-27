@@ -31,4 +31,6 @@
     <dimen name="item_content_padding">9dp</dimen>
     <dimen name="data_border_divider_height">8dp</dimen>
     <dimen name="height_setting_item_view">60dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
 </resources>

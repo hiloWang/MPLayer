@@ -9,6 +9,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
@@ -91,19 +92,20 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
             switch (checkedId) {
                 case R.id.rb1:
                     viewPager.setCurrentItem(0);
-                    toolbar.setVisibility(View.VISIBLE);
+                    fab.setVisibility(View.VISIBLE);
                     break;
                 case R.id.rb2:
                     viewPager.setCurrentItem(1);
-                    toolbar.setVisibility(View.VISIBLE);
+                    fab.setVisibility(View.GONE);
                     break;
                 case R.id.rb3:
                     viewPager.setCurrentItem(2);
-                    toolbar.setVisibility(View.GONE);
+                    ViewCompat.setElevation(appBarLayout,0);
+                    fab.setVisibility(View.GONE);
                     break;
                 case R.id.rb4:
                     viewPager.setCurrentItem(3);
-                    toolbar.setVisibility(View.VISIBLE);
+                    fab.setVisibility(View.GONE);
                     break;
             }
         });
@@ -134,7 +136,7 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
         viewPager.setOffscreenPageLimit(4);
         Fragment[] fragments = {
                 HomeFragment.newInstance(),
-                Page2Fragment.newInstance(),
+                ExpenseOrdersFragment.newInstance(),
                 TabLayoutFragment.newInstance(),
                 LoginFragment.newInstance()
         };
