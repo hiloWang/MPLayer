@@ -44,7 +44,6 @@
 
     <!-- Custom Color -->
     <color name="line">#DCDCDC</color>
-    <color name="background">#eceff1</color>
     <color name="lightblue">#ADD8E6</color>
 
     <!-- 亮蓝色 -->
@@ -75,8 +74,9 @@
     <color name="item_black_text">#202020</color>
     <color name="item_select_normal">#ffffff</color>
     <color name="item_selected">#D3E5F5</color>
-    <color name="background_layout">#EAEEF4</color>
-    <color name="background_layout_fa">#FAFAFA</color>
+    <color name="background_layout_snackbar">#EAEEF4</color>
+    <color name="background_layout_zhihu">#eceff1</color>
+    <color name="background_layout_default">#FAFAFA</color>
     <color name="background_layout_disable">#FEFEFE</color>
 
     <!-- 蓝色姓名颜色-->

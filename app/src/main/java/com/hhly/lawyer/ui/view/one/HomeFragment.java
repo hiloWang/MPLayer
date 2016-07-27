@@ -156,7 +156,7 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
         adapter.setFooterViewLoadingInvisible();
         Snackbar snackbar = Snackbar.make(recyclerView, message, Snackbar.LENGTH_INDEFINITE);
         Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
-        snackbarLayout.setBackgroundColor(getResources().getColor(R.color.background_layout));
+        snackbarLayout.setBackgroundColor(getResources().getColor(R.color.background_layout_snackbar));
         ((TextView) snackbarLayout.findViewById(R.id.snackbar_text)).setTextColor(
                 getResources().getColor(R.color.design_black_text));
         snackbar.setAction("WELL", v -> {

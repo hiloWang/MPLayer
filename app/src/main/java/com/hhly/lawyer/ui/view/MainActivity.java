@@ -282,7 +282,7 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
     private void showSnackbar() {
         Snackbar snackbar = Snackbar.make(fab, "the fab menu clicked :)", Snackbar.LENGTH_SHORT);
         Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
-        snackbarLayout.setBackgroundColor(getResources().getColor(R.color.background_layout));
+        snackbarLayout.setBackgroundColor(getResources().getColor(R.color.background_layout_snackbar));
         ((TextView) snackbarLayout.findViewById(R.id.snackbar_text)).setTextColor(
                 getResources().getColor(R.color.design_black_text));
         snackbar.show();
