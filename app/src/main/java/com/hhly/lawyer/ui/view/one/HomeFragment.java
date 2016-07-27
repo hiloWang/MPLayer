@@ -188,8 +188,12 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
     }
 
     @Override
-    public void renderUserList(HttpResult wrapper) {
-        this.feedAdapter(wrapper);
+    public void renderUserList(HttpResult httpResult) {
+        this.feedAdapter(httpResult);
+    }
+
+    public void loadUserList() {
+        presenter.initialize();
     }
 
     private void checkTheLifeCycleIsChanging(boolean resestTheLifeCycle) {
@@ -205,12 +209,13 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
         this.recyclerView.removeItemDecoration(this.dataDecration);
     }
 
-    private void feedAdapter(/*Collection<UserModel> usersCollection*/HttpResult wrapper) {
+    private void feedAdapter(/*Collection<UserModel> usersCollection*/HttpResult httpResult) {
         this.stopRefreshing();
-        if (wrapper == null) return;
+        if (httpResult == null) return;
         checkNotNull(adapter, "adapter == null");
 //        this.usersLists = (ArrayList<UserModel>)usersCollection;
-        ((MainActivity) getActivity()).getAppComponent().rxBus().send(wrapper.data);
+        if (httpResult != null && httpResult.data != null)
+            ((MainActivity) getActivity()).getAppComponent().rxBus().send(httpResult.data);
 
         if (loadingMoreData) {
             loadingMoreData = false;
@@ -227,10 +232,6 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
         checkNotNull(swipeRefreshLayout, "swipeRefreshLayout == null");
         if (adapter != null) adapter.setFooterViewLoadingInvisible();
         swipeRefreshLayout.setRefreshing(false);
-    }
-
-    public void loadUserList() {
-        presenter.initialize();
     }
 
     private void setAdapter() {

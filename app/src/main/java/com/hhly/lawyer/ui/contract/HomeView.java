@@ -5,5 +5,5 @@ import com.hhly.lawyer.ui.LoadingMvpView;
 
 public interface HomeView extends LoadingMvpView {
 
-    void renderUserList(HttpResult wrapper);
+    void renderUserList(HttpResult httpResult);
 }

@@ -125,6 +125,8 @@ public class HomeAdapter extends BaseRecyclerViewAdapter {
 
         footerViewContainer.setTranslationY(0f);
         startFooterViewLoading(footerViewIcon);
+        // error: Only the original thread that created a view hierarchy can touch its views.
+        // 注意,这里线程转换成子线程,feedAdapter方法走notify时一定要先请求一次api(因为做测试时,没有请求api操作,所以报错了,正常流程的话不会出现此错误),将线程转换成主线程后,在notify
         RxView.clicks(errorFooterView).throttleFirst(1,TimeUnit.SECONDS).observeOn(Schedulers.io()).subscribe(aVoid -> {
             ((MainActivity)context).getAppComponent().rxBus().send(null);
         });

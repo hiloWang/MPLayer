@@ -55,8 +55,8 @@ public class HomePresenter extends BasePresenter<HomeView> {
     }
 
 
-    private void showUsersInView(HttpResult wrapper) {
-        this.getMvpView().renderUserList(wrapper);
+    private void showUsersInView(HttpResult httpResult) {
+        this.getMvpView().renderUserList(httpResult);
     }
 
     private final class MySubscriber extends DefaultSubscriber<HttpResult> {
