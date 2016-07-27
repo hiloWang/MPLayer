@@ -105,9 +105,6 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 this.moveToDown = dy > 0;
-                // 弹出的ContextMenu 跟随之前的窗体滚动及消失
-                //                FeedContextMenuManager.getInstance().onScrolled(recyclerView, dx, dy);
-                //				FeedContextMenuManager.getInstance().hideContextMenu();
             }
         });
     }
@@ -164,7 +161,8 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
             stopRefreshing();
             hideLoading();
         }).show();
-        recyclerView.smoothScrollToPosition(adapter.getItemCount() + 1);
+        // footerView中的errorView的高度要与itemview高度一致，如果不一致，则需要下面这句话
+        // recyclerView.smoothScrollToPosition(adapter.getItemCount() + 1);
     }
 
     @Override
