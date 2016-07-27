@@ -1,10 +1,9 @@
 package com.hhly.lawyer.adapter;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
-import com.hhly.lawyer.ui.view.PagerFragment1;
+import com.hhly.lawyer.ui.view.three.PagerFragment1;
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 

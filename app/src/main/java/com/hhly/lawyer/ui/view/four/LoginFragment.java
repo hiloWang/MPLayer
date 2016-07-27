@@ -1,4 +1,4 @@
-package com.hhly.lawyer.ui.view;
+package com.hhly.lawyer.ui.view.four;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import com.hhly.lawyer.di.components.MainComponent;
 import com.hhly.lawyer.ui.base.BaseFragment;
 import com.hhly.lawyer.ui.contract.LoginView;
 import com.hhly.lawyer.ui.presenter.LoginPresenter;
+import com.hhly.lawyer.ui.view.one.HomeFragment;
 import com.jakewharton.rxbinding.view.RxView;
 
 import java.util.concurrent.TimeUnit;

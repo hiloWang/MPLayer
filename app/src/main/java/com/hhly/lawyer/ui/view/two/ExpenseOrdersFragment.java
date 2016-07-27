@@ -1,4 +1,4 @@
-package com.hhly.lawyer.ui.view;
+package com.hhly.lawyer.ui.view.two;
 
 import android.app.ActivityOptions;
 import android.content.Intent;

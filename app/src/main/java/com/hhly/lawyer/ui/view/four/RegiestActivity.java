@@ -1,4 +1,4 @@
-package com.hhly.lawyer.ui.view;
+package com.hhly.lawyer.ui.view.four;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -21,27 +21,27 @@ import java.util.concurrent.TimeUnit;
 import butterknife.BindView;
 import rx.subscriptions.CompositeSubscription;
 
-public class ForgotYourPasswordActivity extends BaseToolbarActivity {
+public class RegiestActivity extends BaseToolbarActivity {
 
     @BindView(R.id.phoneNum)
     ItemView phoneNum;
     @BindView(R.id.verifyCode)
     ItemView verifyCode;
-    @BindView(R.id.getVerifyCode)
-    TextView getVerifyCode;
     @BindView(R.id.password)
     ItemView password;
     @BindView(R.id.confirm_password)
     ItemView confirmPassword;
     @BindView(R.id.confirm)
     Button confirm;
+    @BindView(R.id.getVerifyCode)
+    TextView getVerifyCode;
 
     private CompositeSubscription compositeSubscription;
     private CountDown countDownTimer;
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_forgotpwd;
+        return R.layout.activity_regiest;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class ForgotYourPasswordActivity extends BaseToolbarActivity {
 
     @Override
     protected void initData() {
-        mActionBarHelper.setTitle(getString(R.string.forgotyourpwd));
+        mActionBarHelper.setTitle(getString(R.string.regiest));
     }
 
     @Override
@@ -66,12 +66,12 @@ public class ForgotYourPasswordActivity extends BaseToolbarActivity {
         countDownTimer = CountDown.getDefault(new CountDown.CountDownCallback() {
             @Override
             public void onFinish() {
-                ForgotYourPasswordActivity.this.setVerifyViewEnabled(true, getString(R.string.login_get_verify_code));
+                RegiestActivity.this.setVerifyViewEnabled(true, getString(R.string.login_get_verify_code));
             }
 
             @Override
             public void onTick(long millisUntilFinished) {
-                ForgotYourPasswordActivity.this.setVerifyViewEnabled(false, millisUntilFinished / CountDown.TIMEOUT_INTERVEL + "秒");
+                RegiestActivity.this.setVerifyViewEnabled(false, millisUntilFinished / CountDown.TIMEOUT_INTERVEL + "秒");
             }
         });
     }
@@ -101,7 +101,7 @@ public class ForgotYourPasswordActivity extends BaseToolbarActivity {
     }
 
     private void showErrorMessage(ErrorBundle errorBundle) {
-        String errorMessage = ErrorMessageFactory.create(ForgotYourPasswordActivity.this, errorBundle.getException());
+        String errorMessage = ErrorMessageFactory.create(RegiestActivity.this, errorBundle.getException());
         this.showToast(errorMessage);
     }
 
@@ -113,14 +113,14 @@ public class ForgotYourPasswordActivity extends BaseToolbarActivity {
 
         @Override
         public void onError(Throwable e) {
-            ForgotYourPasswordActivity.this.showErrorMessage(new DefaultErrorBundle((Exception) e));
-            ForgotYourPasswordActivity.this.countDownTimer.cancel();
-            ForgotYourPasswordActivity.this.setVerifyViewEnabled(true, getString(R.string.login_get_verify_code));
+            RegiestActivity.this.showErrorMessage(new DefaultErrorBundle((Exception) e));
+            RegiestActivity.this.countDownTimer.cancel();
+            RegiestActivity.this.setVerifyViewEnabled(true, getString(R.string.login_get_verify_code));
         }
 
         @Override
         public void onNext(HttpResult wrapper) {
-            ForgotYourPasswordActivity.this.showToast("获取验证码成功");
+            RegiestActivity.this.showToast("获取验证码成功");
         }
     }
 }

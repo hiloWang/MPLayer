@@ -1,4 +1,4 @@
-package com.hhly.lawyer.ui.view;
+package com.hhly.lawyer.ui.view.two;
 
 import android.animation.Animator;
 import android.annotation.TargetApi;
@@ -36,6 +36,8 @@ public class CalcActivity extends BaseToolbarActivity {
     NestedScrollView nestedScrollView;
     @BindView(R.id.coordiNatorContent)
     CoordinatorLayout coordiNatorContent;
+    @BindView(R.id.tvContent)
+    TextView tvContent;
 
     @Override
     protected int getLayoutId() {

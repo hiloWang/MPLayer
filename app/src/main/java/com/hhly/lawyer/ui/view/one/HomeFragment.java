@@ -1,4 +1,4 @@
-package com.hhly.lawyer.ui.view;
+package com.hhly.lawyer.ui.view.one;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import com.hhly.lawyer.di.components.MainComponent;
 import com.hhly.lawyer.ui.base.BaseFragment;
 import com.hhly.lawyer.ui.contract.HomeView;
 import com.hhly.lawyer.ui.presenter.HomePresenter;
+import com.hhly.lawyer.ui.view.MainActivity;
 import com.hhly.lawyer.widget.WrapSwipeRefreshLayout;
 
 import java.util.Arrays;

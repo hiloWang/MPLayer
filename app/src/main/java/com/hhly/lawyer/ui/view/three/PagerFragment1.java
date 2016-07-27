@@ -1,6 +1,5 @@
-package com.hhly.lawyer.ui.view;
+package com.hhly.lawyer.ui.view.three;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
@@ -64,8 +63,7 @@ public class PagerFragment1 extends BaseFragment {
     @Override
     protected void initListeners() {
         RxView.clicks(textView).throttleFirst(1, TimeUnit.SECONDS).subscribe(aVoid -> {
-            if (page == 1) startActivity(new Intent(getActivity(), RegiestActivity.class));
-            else startActivity(new Intent(getActivity(), ForgotYourPasswordActivity.class));
+
         });
 
         RxView.clicks(sivTest).throttleFirst(1, TimeUnit.SECONDS).subscribe(this::showBottomSheet);

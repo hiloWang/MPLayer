@@ -1,4 +1,4 @@
-package com.hhly.lawyer.ui.view;
+package com.hhly.lawyer.ui.view.three;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,6 +8,7 @@ import android.view.View;
 import com.hhly.lawyer.R;
 import com.hhly.lawyer.adapter.MyFragmentPagerAdapter;
 import com.hhly.lawyer.ui.base.BaseFragment;
+import com.hhly.lawyer.ui.view.one.HomeFragment;
 
 import butterknife.BindView;
 

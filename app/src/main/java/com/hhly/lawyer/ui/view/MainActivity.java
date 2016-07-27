@@ -28,6 +28,10 @@ import com.hhly.lawyer.di.components.DaggerMainComponent;
 import com.hhly.lawyer.di.components.MainComponent;
 import com.hhly.lawyer.di.interfaces.HasComponent;
 import com.hhly.lawyer.ui.base.BaseDrawerLayoutActivity;
+import com.hhly.lawyer.ui.view.four.LoginFragment;
+import com.hhly.lawyer.ui.view.one.HomeFragment;
+import com.hhly.lawyer.ui.view.three.TabLayoutFragment;
+import com.hhly.lawyer.ui.view.two.ExpenseOrdersFragment;
 import com.hhly.lawyer.widget.UnScrollableViewPager;
 import com.jakewharton.rxbinding.view.RxView;
 
