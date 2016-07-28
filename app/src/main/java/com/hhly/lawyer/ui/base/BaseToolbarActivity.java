@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.hhly.lawyer.R;
 
@@ -16,6 +17,7 @@ public abstract class BaseToolbarActivity extends BaseAppCompatActivity {
 
 	@BindView(R.id.toolbar) protected Toolbar toolbar;
 	@BindView(R.id.app_bar_layout) protected AppBarLayout appBarLayout;
+	@BindView(R.id.toolbarTitle) protected TextView toolbarTitle;
 
 	protected ActionBarHelper mActionBarHelper;
 
@@ -39,7 +41,6 @@ public abstract class BaseToolbarActivity extends BaseAppCompatActivity {
 
 		this.mActionBarHelper = this.createActionBarHelper();
 		this.mActionBarHelper.init();
-
 
 		if (Build.VERSION.SDK_INT >= 21) {
 			this.appBarLayout.setElevation(6.6f);
@@ -87,6 +88,10 @@ public abstract class BaseToolbarActivity extends BaseAppCompatActivity {
 		}
 	}
 
+	protected void setToolbarTitle(String title) {
+		mActionBarHelper.setTitle(title);
+	}
+
 	/**
 	 * Create a compatible helper that will manipulate the action bar if available.
 	 */
@@ -107,6 +112,9 @@ public abstract class BaseToolbarActivity extends BaseAppCompatActivity {
 			if (this.mActionBar == null) return;
 			this.mActionBar.setDisplayHomeAsUpEnabled(true);
 			this.mActionBar.setDisplayShowHomeEnabled(false);
+			// 设置默认的toolbar标题不显示
+			this.mActionBar.setDisplayShowTitleEnabled(false);
+			BaseToolbarActivity.this.toolbar.setTitle("");
 			this.mTitle = mDrawerTitle = getTitle();
 		}
 
@@ -122,7 +130,7 @@ public abstract class BaseToolbarActivity extends BaseAppCompatActivity {
 
 		public void setTitle(CharSequence title) {
 			this.mTitle = title;
-			mActionBar.setTitle(title);
+			toolbarTitle.setText(title);
 		}
 
 		public void setDrawerTitle(CharSequence drawerTitle) {

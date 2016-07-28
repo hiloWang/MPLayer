@@ -78,6 +78,7 @@
     <color name="background_layout_zhihu">#eceff1</color>
     <color name="background_layout_default">#FAFAFA</color>
     <color name="background_layout_disable">#FEFEFE</color>
+    <color name="background_layout_gray">#40ffffff</color>
 
     <!-- 蓝色姓名颜色-->
     <color name="design_blue_name">#75B6FF</color>

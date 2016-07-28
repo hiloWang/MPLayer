@@ -24,11 +24,19 @@
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
-                app:layout_scrollFlags="scroll"
-                app:theme="@style/toolbarTheme" />
+                android:minHeight="?attr/actionBarSize">
 
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_18" />
+            </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView
@@ -76,8 +84,8 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:clickable="true"
                             android:background="@drawable/btn_conners_clickable"
+                            android:clickable="true"
                             android:padding="@dimen/item_content_padding">
 
                             <TextView
@@ -122,8 +130,8 @@
                         android:id="@+id/circularRevealContainer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:clickable="true"
                         android:background="@drawable/btn_conners_clickable"
+                        android:clickable="true"
                         android:orientation="vertical">
 
                         <TextView

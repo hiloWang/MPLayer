@@ -98,7 +98,7 @@ public class CalcActivity extends BaseToolbarActivity {
     private void setupToolbarTitle() {
         Bundle expenseOridersBundle = getIntent().getExtras();
         if (expenseOridersBundle != null) {
-            mActionBarHelper.setTitle(getString(R.string.calc_title));
+            this.setToolbarTitle(getString(R.string.calc_title));
             nsTitle.setText(expenseOridersBundle.getString("title"));
         }
     }

@@ -76,10 +76,12 @@ public class HomeAdapter extends BaseRecyclerViewAdapter {
     @SuppressLint("SetTextI18n") private void bindDefaultView(BaseRecyclerViewHolder viewHolder,int position) {
         String data = getItemByPosition(position);
         checkNotNull(data,"data == null");
+        CardView container = viewHolder.findViewById(R.id.container);
         TextView mDailyTitleTv = viewHolder.findViewById(R.id.daily_title_tv);
         TextView mDailyDateTv = viewHolder.findViewById(R.id.daily_date_tv);
         ImageView mDailyIv = viewHolder.findViewById(R.id.daily_iv);
 
+        container.setVisibility(View.VISIBLE);
         mDailyTitleTv.setText("华海乐盈" + position);
         mDailyDateTv.setText(DateUtils.date2yyyyMMdd(new Date()));
 

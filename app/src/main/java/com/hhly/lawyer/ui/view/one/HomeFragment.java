@@ -209,7 +209,7 @@ public class HomeFragment extends BaseFragment implements HomeView, BaseRecycler
 
     private void feedAdapter(/*Collection<UserModel> usersCollection*/HttpResult httpResult) {
         this.stopRefreshing();
-        if (httpResult == null) return;
+//        if (httpResult == null) return;
         checkNotNull(adapter, "adapter == null");
 //        this.usersLists = (ArrayList<UserModel>)usersCollection;
         if (httpResult != null && httpResult.data != null)

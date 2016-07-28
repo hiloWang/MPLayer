@@ -1,5 +1,6 @@
 package com.hhly.lawyer.ui.view.four;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
@@ -56,12 +57,13 @@ public class RegiestActivity extends BaseToolbarActivity {
 
     @Override
     protected void initData() {
-        mActionBarHelper.setTitle(getString(R.string.regiest));
+        this.setToolbarTitle(getString(R.string.regiest));
     }
 
     @Override
     protected void initListeners() {
         RxView.clicks(getVerifyCode).throttleFirst(1, TimeUnit.SECONDS).subscribe(this::getVerifyCode);
+        RxView.clicks(confirm).throttleFirst(1, TimeUnit.SECONDS).subscribe(this::bringToIdentityACActivity);
 
         countDownTimer = CountDown.getDefault(new CountDown.CountDownCallback() {
             @Override
@@ -98,6 +100,10 @@ public class RegiestActivity extends BaseToolbarActivity {
         }
         compositeSubscription.add(getApiComponent().dataStore().getDummyData(number, "4").subscribe(new MySubscriber()));
         countDownTimer.start();
+    }
+
+    private void bringToIdentityACActivity(Void aVoid) {
+        startActivity(new Intent(RegiestActivity.this, IdentityACActivity.class));
     }
 
     private void showErrorMessage(ErrorBundle errorBundle) {

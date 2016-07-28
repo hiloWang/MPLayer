@@ -81,7 +81,9 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
 
     @Override
     protected void initData() {
-
+        // 默认进入主页，设置主页标题
+        viewPager.setCurrentItem(0);
+        this.setToolbarTitle("title1");
     }
 
     @Override
@@ -96,19 +98,23 @@ public class MainActivity extends BaseDrawerLayoutActivity implements HasCompone
             switch (checkedId) {
                 case R.id.rb1:
                     viewPager.setCurrentItem(0);
+                    this.setToolbarTitle("title1");
                     fab.setVisibility(View.VISIBLE);
                     break;
                 case R.id.rb2:
                     viewPager.setCurrentItem(1);
+                    this.setToolbarTitle("title2");
                     fab.setVisibility(View.GONE);
                     break;
                 case R.id.rb3:
                     viewPager.setCurrentItem(2);
-                    ViewCompat.setElevation(appBarLayout,0);
+                    this.setToolbarTitle("title3");
+                    ViewCompat.setElevation(appBarLayout, 0);
                     fab.setVisibility(View.GONE);
                     break;
                 case R.id.rb4:
                     viewPager.setCurrentItem(3);
+                    this.setToolbarTitle("title4");
                     fab.setVisibility(View.GONE);
                     break;
             }

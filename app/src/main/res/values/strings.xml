@@ -14,7 +14,8 @@
     <string name="password_error">密码不能为空</string>
     <string name="login_input_phone_num">请输入手机号码</string>
     <string name="login_pwd_format">密码由6-16位字母(区分大小写)、数字或下划线组成</string>
-    <string name="confirmation">确认</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
     <string name="login_verify_code">短信验证码</string>
     <string name="login_get_verify_code">获取验证码</string>
     <string name="login_input_password">请输入密码</string>
@@ -25,4 +26,23 @@
     <string name="forgotyourpwd">找回密码</string>
     <string name="validate_phone_number">手机号码不能为空</string>
     <string name="calc_title">律师费用计算器</string>
+    <string name="logout_confirm">你确认要退出当前账号吗？</string>
+    <string name="identity_ac_title">职业身份认证</string>
+    <string name="identity_username">真实姓名</string>
+    <string name="identity_sex">性别</string>
+    <string name="identity_profession_id">执业证号</string>
+    <string name="identity_profession_time">执业时长</string>
+    <string name="identity_lawyer_username">律师名称</string>
+    <string name="identity_lawyer_adress">律师地址</string>
+    <string name="identity_hint_lawyer_username">请输入名称</string>
+    <string name="identity_hint_adress">请输入地址</string>
+    <string name="identity_hint_time">请输入时长</string>
+    <string name="identity_hint_id">请输入证号</string>
+    <string name="identity_hint_sex">男</string>
+    <string name="identity_hint_username">如：张三</string>
+    <string name="identity_tips_text_part1">执业认证后将点亮</string>
+    <string name="identity_tips_text_part2">图标</string>
+    <string name="identity_tips_text_part3">有助于您获得更多的用户关注</string>
+    <string name="next_step">下一步</string>
+
 </resources>

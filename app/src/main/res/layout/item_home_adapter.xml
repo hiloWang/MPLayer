@@ -9,13 +9,13 @@
     style="@style/Md.Card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:transitionName="sharedCardView">
+    android:transitionName="sharedCardView"
+    android:visibility="gone">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/btn_conners_clickable"
-        android:clickable="true"
         android:padding="@dimen/item_content_padding">
 
         <ImageView

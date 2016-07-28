@@ -56,7 +56,7 @@ public class ForgotYourPasswordActivity extends BaseToolbarActivity {
 
     @Override
     protected void initData() {
-        mActionBarHelper.setTitle(getString(R.string.forgotyourpwd));
+        this.setToolbarTitle(getString(R.string.forgotyourpwd));
     }
 
     @Override

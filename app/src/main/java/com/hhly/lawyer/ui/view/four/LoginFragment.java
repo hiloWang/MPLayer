@@ -15,6 +15,7 @@ import com.hhly.lawyer.ui.base.BaseFragment;
 import com.hhly.lawyer.ui.contract.LoginView;
 import com.hhly.lawyer.ui.presenter.LoginPresenter;
 import com.hhly.lawyer.ui.view.one.HomeFragment;
+import com.hhly.lawyer.widget.dialog.DialogWindow;
 import com.jakewharton.rxbinding.view.RxView;
 
 import java.util.concurrent.TimeUnit;
@@ -162,6 +163,7 @@ public class LoginFragment extends BaseFragment implements LoginView {
 
     private void bringToActivity(Void aVoid) {
         presenter.validateCredentials(etUsername.getText().toString(), etPassword.getText().toString());
+        DialogWindow.newInstance().show(getChildFragmentManager(), DialogWindow.class.getSimpleName());
     }
 
     private void bringToForgotYourPasswordActivity(Void aVoid) {

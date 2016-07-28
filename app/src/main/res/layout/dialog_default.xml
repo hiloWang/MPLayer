@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/dialog_bg_default">
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/dialog_text_default_ww"
+        android:text="@string/logout_confirm"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/design_black_secondary"
+        style="@style/dialog_btn_default_ww"
+        android:background="@drawable/bg_btn_disable"
+        android:text="@string/confirm"
+        />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="31dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        style="@style/dialog_btn_default_ww"
+        android:background="@drawable/bg_btn"
+        android:text="@string/cancel"
+        />
+
+</RelativeLayout>

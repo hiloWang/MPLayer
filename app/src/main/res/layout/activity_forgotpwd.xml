@@ -82,7 +82,7 @@
         android:layout_margin="8dp"
         android:background="@drawable/btn_conners_clickable"
         android:clickable="true"
-        android:text="@string/confirmation"
+        android:text="@string/confirm"
         android:textColor="@color/design_black_bold"
         android:textSize="@dimen/text_size_18" />
 
